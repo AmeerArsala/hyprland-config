@@ -20,6 +20,7 @@ sleep 1
 
 # start xdg-desktop-portal-hyprland
 /usr/lib/xdg-desktop-portal-hyprland &
+/usr/libexec/xdg-desktop-portal-hyprland &
 sleep 2
 
 # start xdg-desktop-portal-gtk
@@ -30,4 +31,5 @@ fi
 
 # start xdg-desktop-portal
 /usr/lib/xdg-desktop-portal &
+/usr/libexec/xdg-desktop-portal &
 sleep 1

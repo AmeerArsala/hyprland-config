@@ -19,7 +19,7 @@ executed=false  # Flag to track if a file has been executed
 for file in "${polkit[@]}"; do
   if [ -e "$file" ]; then
     echo "File $file found, executing command..."
-    exec "$file"  
+    exec "$file"
     executed=true
     break
   fi
