@@ -33,7 +33,7 @@ gsettings set "$gnome_schema" font-name "$font_name"
 gsettings set "$gnome_schema" color-scheme "prefer-dark"
 
 # Do it on hyprland
-#hyprctl setcursor $cursor_theme $cursor_size
+hyprctl setcursor $cursor_theme $cursor_size
 
 # For nautilus
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal "$terminal"
