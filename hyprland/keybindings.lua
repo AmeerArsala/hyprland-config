@@ -31,7 +31,13 @@ hl.define_submap("global", function()
 	-- Shell (quickshell)
 	-- These absolutely need to be on top, or they won't work consistently
 	----------------------------------------------------------------
-	hl.bind("SUPER + Super_L", exec(launchRofi .. [[/launcher_t1 "style-6" || pkill fuzzel || fuzzel]])) -- Launcher (fallback)
+	-- Launcher (fallback): fires when Super is released, not when pressed.
+	-- ignore_mods is needed because SUPER is no longer held by the time of the release event.
+	hl.bind(
+		"Super_L",
+		exec(launchRofi .. [[/launcher_t1 "style-6" || pkill fuzzel || fuzzel]]),
+		{ release = true, ignore_mods = true }
+	)
 	hl.bind(
 		"catchall",
 		hl.dsp.global("quickshell:overviewToggleReleaseInterrupt"),
